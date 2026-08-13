@@ -1,0 +1,939 @@
+/* ========================================
+   PÁGINA DO IMÓVEL
+======================================== */
+
+
+/* ========================================
+   PÁGINA
+======================================== */
+
+.property-page {
+
+    padding: 45px 0 90px;
+
+    background: #ffffff;
+}
+
+
+/* ========================================
+   VOLTAR
+======================================== */
+
+.back-link {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 28px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: var(--transition);
+}
+
+
+.back-link:hover {
+
+    color: var(--primary);
+
+    transform: translateX(-3px);
+}
+
+
+/* ========================================
+   CABEÇALHO DO IMÓVEL
+======================================== */
+
+.property-header {
+
+    display: flex;
+
+    align-items: end;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 25px;
+}
+
+
+.property-location {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--primary);
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+.property-header h1 {
+
+    max-width: 800px;
+
+    margin-bottom: 10px;
+
+    color: var(--dark);
+
+    font-size: clamp(
+        30px,
+        4vw,
+        44px
+    );
+
+    line-height: 1.15;
+
+    letter-spacing: -1px;
+}
+
+
+.property-meta {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+
+.property-meta strong {
+
+    color: var(--dark);
+}
+
+
+.property-actions {
+
+    display: flex;
+
+    gap: 10px;
+}
+
+
+.action-button {
+
+    padding: 10px 15px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 9px;
+
+    color: var(--text);
+
+    background: white;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: var(--transition);
+}
+
+
+.action-button:hover {
+
+    border-color: var(--primary);
+
+    color: var(--primary);
+
+    background: var(--primary-light);
+}
+
+
+/* ========================================
+   GALERIA
+======================================== */
+
+.property-gallery {
+
+    height: 480px;
+
+    display: grid;
+
+    grid-template-columns:
+        2fr
+        1fr;
+
+    gap: 8px;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    margin-bottom: 45px;
+}
+
+
+.gallery-main {
+
+    height: 100%;
+}
+
+
+.gallery-side {
+
+    display: grid;
+
+    grid-template-rows:
+        1fr
+        1fr;
+
+    gap: 8px;
+
+    height: 100%;
+}
+
+
+.gallery-image {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 75px;
+
+    cursor: pointer;
+
+    transition: transform 0.4s ease;
+}
+
+
+.gallery-image:hover {
+
+    transform: scale(1.02);
+}
+
+
+.gallery-main-image {
+
+    background:
+        linear-gradient(
+            135deg,
+            #38bdf8,
+            #0f766e
+        );
+}
+
+
+.gallery-image-2 {
+
+    background:
+        linear-gradient(
+            135deg,
+            #fbbf24,
+            #f97316
+        );
+}
+
+
+.gallery-image-3 {
+
+    background:
+        linear-gradient(
+            135deg,
+            #2dd4bf,
+            #2563eb
+        );
+}
+
+
+/* ========================================
+   LAYOUT PRINCIPAL
+======================================== */
+
+.property-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(
+            0,
+            1.5fr
+        )
+        minmax(
+            330px,
+            0.7fr
+        );
+
+    gap: 70px;
+
+    align-items: start;
+}
+
+
+/* ========================================
+   PROPRIETÁRIO
+======================================== */
+
+.property-owner {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding-bottom: 28px;
+
+    border-bottom:
+        1px solid var(--border);
+}
+
+
+.property-owner h2 {
+
+    margin-bottom: 5px;
+
+    color: var(--dark);
+
+    font-size: 20px;
+}
+
+
+.property-owner h2 span {
+
+    color: var(--primary);
+}
+
+
+.property-owner p {
+
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+
+.owner-avatar {
+
+    width: 58px;
+
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        var(--primary-light);
+
+    font-size: 27px;
+}
+
+
+/* ========================================
+   CARACTERÍSTICAS
+======================================== */
+
+.property-features {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            1fr
+        );
+
+    gap: 25px;
+
+    padding: 30px 0;
+
+    border-bottom:
+        1px solid var(--border);
+}
+
+
+.feature {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.feature-icon {
+
+    width: 45px;
+
+    height: 45px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background:
+        var(--primary-light);
+
+    font-size: 20px;
+}
+
+
+.feature div {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.feature strong {
+
+    color: var(--dark);
+
+    font-size: 14px;
+}
+
+
+.feature div span {
+
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+
+/* ========================================
+   SEÇÕES DE INFORMAÇÃO
+======================================== */
+
+.property-section {
+
+    padding: 35px 0;
+
+    border-bottom:
+        1px solid var(--border);
+}
+
+
+.property-section h2 {
+
+    margin-bottom: 18px;
+
+    color: var(--dark);
+
+    font-size: 23px;
+}
+
+
+.property-section p {
+
+    max-width: 750px;
+
+    margin-bottom: 14px;
+
+    color: var(--text);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   COMODIDADES
+======================================== */
+
+.amenities {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            1fr
+        );
+
+    gap: 16px;
+}
+
+
+.amenities div {
+
+    padding: 15px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 10px;
+
+    color: var(--text);
+
+    background: #ffffff;
+
+    font-size: 14px;
+
+    transition: var(--transition);
+}
+
+
+.amenities div:hover {
+
+    border-color: var(--primary);
+
+    color: var(--primary);
+
+    background:
+        var(--primary-light);
+
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   MAPA
+======================================== */
+
+.fake-map {
+
+    height: 260px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+    margin-top: 25px;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #dbeafe,
+            #ccfbf1
+        );
+
+    text-align: center;
+}
+
+
+.fake-map span {
+
+    font-size: 55px;
+}
+
+
+.fake-map p {
+
+    margin: 5px 0 0;
+
+    color: var(--primary);
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+/* ========================================
+   CARD DE RESERVA
+======================================== */
+
+.booking-card {
+
+    position: sticky;
+
+    top: 105px;
+
+    padding: 25px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 18px;
+
+    background: white;
+
+    box-shadow:
+        0 12px 35px
+        rgba(
+            15,
+            23,
+            42,
+            0.1
+        );
+}
+
+
+.booking-price {
+
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 5px;
+
+    margin-bottom: 8px;
+}
+
+
+.booking-price strong {
+
+    color: var(--dark);
+
+    font-size: 28px;
+}
+
+
+.booking-price span {
+
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+
+.booking-rating {
+
+    padding-bottom: 20px;
+
+    color: var(--text);
+
+    border-bottom:
+        1px solid var(--border);
+
+    font-size: 13px;
+}
+
+
+/* ========================================
+   FORMULÁRIO DE RESERVA
+======================================== */
+
+.booking-form {
+
+    padding-top: 20px;
+}
+
+
+.booking-field {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+    margin-bottom: 14px;
+}
+
+
+.booking-field label {
+
+    color: var(--dark);
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+.booking-field input,
+.booking-field select {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 9px;
+
+    outline: none;
+
+    color: var(--text);
+
+    background: white;
+}
+
+
+.booking-field input:focus,
+.booking-field select:focus {
+
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(
+            15,
+            118,
+            110,
+            0.1
+        );
+}
+
+
+/* ========================================
+   BOTÃO DE RESERVA
+======================================== */
+
+.booking-button {
+
+    width: 100%;
+
+    margin-top: 5px;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    color: white;
+
+    background: var(--primary);
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: var(--transition);
+}
+
+
+.booking-button:hover {
+
+    background: var(--primary-dark);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(
+            15,
+            118,
+            110,
+            0.25
+        );
+}
+
+
+.booking-note {
+
+    margin-top: 10px;
+
+    color: var(--muted);
+
+    text-align: center;
+
+    font-size: 11px;
+}
+
+
+/* ========================================
+   TOTAL DA RESERVA
+======================================== */
+
+.booking-total {
+
+    margin-top: 20px;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid var(--border);
+}
+
+
+.booking-total > div {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 13px;
+
+    color: var(--text);
+
+    font-size: 13px;
+}
+
+
+.booking-total strong {
+
+    color: var(--dark);
+}
+
+
+.booking-total .total-final {
+
+    margin-top: 18px;
+
+    padding-top: 18px;
+
+    border-top:
+        1px solid var(--border);
+
+    color: var(--dark);
+
+    font-size: 16px;
+}
+
+
+.booking-total .total-final strong {
+
+    font-size: 20px;
+
+    color: var(--primary);
+}
+
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 1000px) {
+
+    .property-gallery {
+
+        height: 380px;
+
+    }
+
+
+    .property-layout {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+    }
+
+
+    .booking-card {
+
+        position: static;
+
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .property-page {
+
+        padding-top: 30px;
+
+    }
+
+
+    .property-header {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+    }
+
+
+    .property-header h1 {
+
+        font-size: 30px;
+
+    }
+
+
+    .property-actions {
+
+        width: 100%;
+    }
+
+
+    .action-button {
+
+        flex: 1;
+    }
+
+
+    .property-gallery {
+
+        height: 330px;
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .gallery-side {
+
+        display: none;
+
+    }
+
+
+    .property-features {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .amenities {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .booking-card {
+
+        padding: 20px;
+
+    }
+
+}

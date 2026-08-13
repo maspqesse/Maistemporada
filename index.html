@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Temporada SE | Encontre seu próximo destino</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+</head>
+
+<body>
+
+    <!-- =========================
+         CABEÇALHO
+    ========================== -->
+
+    <header class="header">
+
+        <div class="container header-content">
+
+            <a href="index.html" class="logo">
+                <span class="logo-icon">⌂</span>
+                <span>Temporada<span class="logo-highlight">SE</span></span>
+            </a>
+
+            <nav class="nav">
+
+                <a href="#inicio">
+                    Início
+                </a>
+
+                <a href="#destinos">
+                    Destinos
+                </a>
+
+                <a href="#imoveis">
+                    Imóveis
+                </a>
+
+                <a href="#sobre">
+                    Sobre nós
+                </a>
+
+            </nav>
+
+            <div class="header-actions">
+
+                <a
+                    href="pages/login.html"
+                    class="login-link"
+                >
+                    Entrar
+                </a>
+
+                <a
+                    href="pages/cadastro.html"
+                    class="btn btn-primary"
+                >
+                    Criar conta
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <main>
+
+        <section
+            class="hero"
+            id="inicio"
+        >
+
+            <div class="container hero-content">
+
+                <div class="hero-text">
+
+                    <span class="hero-tag">
+                        🏖️ Viva Sergipe
+                    </span>
+
+                    <h1>
+                        Encontre seu próximo
+                        <span>destino.</span>
+                    </h1>
+
+                    <p>
+                        Casas incríveis para você aproveitar
+                        férias, feriados e finais de semana
+                        em Sergipe.
+                    </p>
+
+                </div>
+
+
+                <!-- BUSCA -->
+
+                <div class="search-card">
+
+                    <div class="search-item">
+
+                        <label for="destino">
+                            📍 Destino
+                        </label>
+
+                        <input
+                            type="text"
+                            id="destino"
+                            placeholder="Para onde você vai?"
+                        >
+
+                    </div>
+
+
+                    <div class="search-item">
+
+                        <label for="entrada">
+                            📅 Entrada
+                        </label>
+
+                        <input
+                            type="date"
+                            id="entrada"
+                        >
+
+                    </div>
+
+
+                    <div class="search-item">
+
+                        <label for="saida">
+                            📅 Saída
+                        </label>
+
+                        <input
+                            type="date"
+                            id="saida"
+                        >
+
+                    </div>
+
+
+                    <div class="search-item">
+
+                        <label for="hospedes">
+                            👥 Hóspedes
+                        </label>
+
+                        <select id="hospedes">
+
+                            <option value="">
+                                Quantas pessoas?
+                            </option>
+
+                            <option value="1">
+                                1 pessoa
+                            </option>
+
+                            <option value="2">
+                                2 pessoas
+                            </option>
+
+                            <option value="4">
+                                4 pessoas
+                            </option>
+
+                            <option value="6">
+                                6 pessoas
+                            </option>
+
+                            <option value="8">
+                                8+ pessoas
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <button
+                        class="search-button"
+                        id="btnBuscar"
+                    >
+                        Buscar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             DESTINOS
+        ========================== -->
+
+        <section
+            class="section"
+            id="destinos"
+        >
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div>
+
+                        <span class="section-tag">
+                            Explore Sergipe
+                        </span>
+
+                        <h2>
+                            Destinos populares
+                        </h2>
+
+                    </div>
+
+                    <a
+                        href="#"
+                        class="see-more"
+                    >
+                        Ver todos →
+                    </a>
+
+                </div>
+
+
+                <div class="destination-grid">
+
+
+                    <article class="destination-card">
+
+                        <div class="destination-image praia">
+
+                            <span>
+                                🏖️
+                            </span>
+
+                        </div>
+
+                        <div class="destination-info">
+
+                            <h3>
+                                Barra dos Coqueiros
+                            </h3>
+
+                            <p>
+                                Praias e tranquilidade
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="destination-card">
+
+                        <div class="destination-image aracaju">
+
+                            <span>
+                                🌊
+                            </span>
+
+                        </div>
+
+                        <div class="destination-info">
+
+                            <h3>
+                                Aracaju
+                            </h3>
+
+                            <p>
+                                Praia, cultura e gastronomia
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="destination-card">
+
+                        <div class="destination-image saco">
+
+                            <span>
+                                🌴
+                            </span>
+
+                        </div>
+
+                        <div class="destination-info">
+
+                            <h3>
+                                Praia do Saco
+                            </h3>
+
+                            <p>
+                                Natureza e belas paisagens
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="destination-card">
+
+                        <div class="destination-image itaporanga">
+
+                            <span>
+                                ☀️
+                            </span>
+
+                        </div>
+
+                        <div class="destination-info">
+
+                            <h3>
+                                Itaporanga d'Ajuda
+                            </h3>
+
+                            <p>
+                                Descanso perto da natureza
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             IMÓVEIS
+        ========================== -->
+
+        <section
+            class="section section-light"
+            id="imoveis"
+        >
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div>
+
+                        <span class="section-tag">
+                            Escolha seu refúgio
+                        </span>
+
+                        <h2>
+                            Casas em destaque
+                        </h2>
+
+                    </div>
+
+                    <a
+                        href="#"
+                        class="see-more"
+                    >
+                        Ver todos →
+                    </a>
+
+                </div>
+
+
+                <div class="property-grid">
+
+
+                    <!-- CASA 1 -->
+
+                    <article class="property-card">
+
+                        <div class="property-image casa-1">
+
+                            <span class="favorite">
+                                ♡
+                            </span>
+
+                            <span class="property-badge">
+                                Destaque
+                            </span>
+
+                        </div>
+
+                        <div class="property-content">
+
+                            <div class="property-location">
+                                📍 Barra dos Coqueiros - SE
+                            </div>
+
+                            <h3>
+                                Casa aconchegante perto da praia
+                            </h3>
+
+                            <p class="property-details">
+                                3 quartos · 2 banheiros · 8 hóspedes
+                            </p>
+
+                            <div class="property-footer">
+
+                                <div>
+
+                                    <strong>
+                                        R$ 350
+                                    </strong>
+
+                                    <span>
+                                        / noite
+                                    </span>
+
+                                </div>
+
+                                <div class="rating">
+                                    ⭐ 4.9
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- CASA 2 -->
+
+                    <article class="property-card">
+
+                        <div class="property-image casa-2">
+
+                            <span class="favorite">
+                                ♡
+                            </span>
+
+                        </div>
+
+                        <div class="property-content">
+
+                            <div class="property-location">
+                                📍 Itaporanga d'Ajuda - SE
+                            </div>
+
+                            <h3>
+                                Refúgio com piscina
+                            </h3>
+
+                            <p class="property-details">
+                                4 quartos · 3 banheiros · 10 hóspedes
+                            </p>
+
+                            <div class="property-footer">
+
+                                <div>
+
+                                    <strong>
+                                        R$ 480
+                                    </strong>
+
+                                    <span>
+                                        / noite
+                                    </span>
+
+                                </div>
+
+                                <div class="rating">
+                                    ⭐ 4.8
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- CASA 3 -->
+
+                    <article class="property-card">
+
+                        <div class="property-image casa-3">
+
+                            <span class="favorite">
+                                ♡
+                            </span>
+
+                        </div>
+
+                        <div class="property-content">
+
+                            <div class="property-location">
+                                📍 Praia do Saco - SE
+                            </div>
+
+                            <h3>
+                                Casa com vista para o mar
+                            </h3>
+
+                            <p class="property-details">
+                                3 quartos · 2 banheiros · 7 hóspedes
+                            </p>
+
+                            <div class="property-footer">
+
+                                <div>
+
+                                    <strong>
+                                        R$ 420
+                                    </strong>
+
+                                    <span>
+                                        / noite
+                                    </span>
+
+                                </div>
+
+                                <div class="rating">
+                                    ⭐ 4.9
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CHAMADA PARA PROPRIETÁRIOS
+        ========================== -->
+
+        <section
+            class="owner-section"
+            id="sobre"
+        >
+
+            <div class="container owner-content">
+
+                <div>
+
+                    <span class="section-tag">
+                        Você tem um imóvel?
+                    </span>
+
+                    <h2>
+                        Transforme seu imóvel
+                        em uma nova oportunidade.
+                    </h2>
+
+                    <p>
+                        Cadastre sua casa no Temporada SE
+                        e encontre pessoas procurando
+                        pelo próximo lugar para descansar.
+                    </p>
+
+                    <a
+                        href="pages/cadastro.html"
+                        class="btn btn-light"
+                    >
+                        Quero anunciar meu imóvel
+                    </a>
+
+                </div>
+
+                <div class="owner-icon">
+                    🏠
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <div>
+
+                <a
+                    href="index.html"
+                    class="logo footer-logo"
+                >
+                    <span class="logo-icon">⌂</span>
+                    Temporada<span class="logo-highlight">SE</span>
+                </a>
+
+                <p>
+                    Seu próximo destino começa aqui.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <div>
+
+                    <h4>
+                        Temporada SE
+                    </h4>
+
+                    <a href="#">
+                        Sobre nós
+                    </a>
+
+                    <a href="#">
+                        Como funciona
+                    </a>
+
+                    <a href="#">
+                        Contato
+                    </a>
+
+                </div>
+
+
+                <div>
+
+                    <h4>
+                        Para hóspedes
+                    </h4>
+
+                    <a href="#">
+                        Encontrar imóveis
+                    </a>
+
+                    <a href="#">
+                        Minhas reservas
+                    </a>
+
+                    <a href="#">
+                        Favoritos
+                    </a>
+
+                </div>
+
+
+                <div>
+
+                    <h4>
+                        Para proprietários
+                    </h4>
+
+                    <a href="#">
+                        Anunciar imóvel
+                    </a>
+
+                    <a href="#">
+                        Gerenciar imóveis
+                    </a>
+
+                    <a href="#">
+                        Minhas reservas
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Temporada SE. Projeto acadêmico MAISTI/UFS.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
