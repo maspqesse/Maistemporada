@@ -1,0 +1,880 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Entrar | Temporada SE</title>
+
+    <!-- CSS geral -->
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <style>
+
+        /* =====================================
+           PÁGINA DE LOGIN
+        ====================================== */
+
+        .login-page {
+            min-height: calc(100vh - 160px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+            background: #f8fafc;
+        }
+
+
+        .login-card {
+            width: 100%;
+            max-width: 440px;
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 40px;
+            box-shadow: 0 10px 35px rgba(15, 23, 42, 0.10);
+        }
+
+
+        .login-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+
+        .login-header h1 {
+            margin-bottom: 10px;
+            color: #0f172a;
+        }
+
+
+        .login-header p {
+            color: #64748b;
+            margin: 0;
+        }
+
+
+        .login-field {
+            margin-bottom: 20px;
+        }
+
+
+        .login-field label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #334155;
+        }
+
+
+        .login-field input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 13px 15px;
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
+            font-size: 16px;
+            outline: none;
+        }
+
+
+        .login-field input:focus {
+            border-color: #0ea5e9;
+            box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.12);
+        }
+
+
+        .login-button {
+            width: 100%;
+            border: none;
+            padding: 14px;
+            border-radius: 10px;
+            background: #0ea5e9;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+
+
+        .login-button:hover {
+            background: #0284c7;
+        }
+
+
+        .login-message {
+            display: none;
+            margin-top: 18px;
+            padding: 12px 15px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+
+        .login-message.error {
+            display: block;
+            background: #fee2e2;
+            color: #b91c1c;
+        }
+
+
+        .login-message.success {
+            display: block;
+            background: #dcfce7;
+            color: #166534;
+        }
+
+
+        .login-register {
+            text-align: center;
+            margin-top: 25px;
+            color: #64748b;
+        }
+
+
+        .login-register a {
+            color: #0284c7;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+
+        /* =====================================
+           RESERVA PENDENTE
+        ====================================== */
+
+        .reservation-box {
+            display: none;
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+
+        .reservation-box h2 {
+            font-size: 20px;
+            margin-bottom: 18px;
+            color: #0f172a;
+        }
+
+
+        .reservation-info {
+            display: grid;
+            gap: 10px;
+        }
+
+
+        .reservation-info div {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 8px 0;
+            color: #475569;
+        }
+
+
+        .reservation-info strong {
+            color: #0f172a;
+            text-align: right;
+        }
+
+
+        .confirm-button {
+            width: 100%;
+            border: none;
+            padding: 14px;
+            border-radius: 10px;
+            background: #16a34a;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+
+        .confirm-button:hover {
+            background: #15803d;
+        }
+
+
+        .confirmation {
+            display: none;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+
+        .confirmation-icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+
+        .confirmation h2 {
+            color: #166534;
+            margin-bottom: 10px;
+        }
+
+
+        .confirmation p {
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+
+        .back-home {
+            display: inline-block;
+            margin-top: 20px;
+            color: #0284c7;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================
+         HEADER
+    ====================================== -->
+
+    <header class="header">
+
+        <div class="container header-content">
+
+            <a
+                href="../index.html"
+                class="logo"
+            >
+
+                <span class="logo-icon">
+                    ⌂
+                </span>
+
+                <span>
+                    Temporada<span class="logo-highlight">SE</span>
+                </span>
+
+            </a>
+
+
+            <nav class="nav">
+
+                <a href="../index.html">
+                    Início
+                </a>
+
+                <a href="../index.html#destinos">
+                    Destinos
+                </a>
+
+                <a href="../index.html#imoveis">
+                    Imóveis
+                </a>
+
+                <a href="../index.html#sobre">
+                    Sobre nós
+                </a>
+
+            </nav>
+
+
+            <div class="header-actions">
+
+                <a
+                    href="cadastro.html"
+                    class="btn btn-primary"
+                >
+                    Criar conta
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================
+         LOGIN
+    ====================================== -->
+
+    <main class="login-page">
+
+        <section class="login-card">
+
+
+            <div
+                class="login-header"
+                id="loginHeader"
+            >
+
+                <h1>
+                    Bem-vindo de volta!
+                </h1>
+
+                <p>
+                    Entre na sua conta para continuar.
+                </p>
+
+            </div>
+
+
+            <!-- FORMULÁRIO -->
+
+            <form id="loginForm">
+
+                <div class="login-field">
+
+                    <label for="email">
+                        E-mail
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="seuemail@email.com"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="login-field">
+
+                    <label for="senha">
+                        Senha
+                    </label>
+
+                    <input
+                        type="password"
+                        id="senha"
+                        placeholder="Digite sua senha"
+                        required
+                    >
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="login-button"
+                >
+                    Entrar
+                </button>
+
+
+                <div
+                    id="loginMessage"
+                    class="login-message"
+                ></div>
+
+            </form>
+
+
+            <!-- =================================
+                 RESERVA PENDENTE
+            ================================== -->
+
+            <div
+                id="reservationBox"
+                class="reservation-box"
+            >
+
+                <h2>
+                    Sua reserva
+                </h2>
+
+
+                <div
+                    id="reservationInfo"
+                    class="reservation-info"
+                ></div>
+
+
+                <button
+                    type="button"
+                    id="confirmButton"
+                    class="confirm-button"
+                >
+                    Confirmar reserva
+                </button>
+
+            </div>
+
+
+            <!-- =================================
+                 CONFIRMAÇÃO
+            ================================== -->
+
+            <div
+                id="confirmation"
+                class="confirmation"
+            >
+
+                <div class="confirmation-icon">
+                    ✅
+                </div>
+
+                <h2>
+                    Reserva solicitada!
+                </h2>
+
+                <p>
+                    Sua reserva foi registrada com sucesso.
+                    Este é um protótipo acadêmico, então nenhuma
+                    cobrança real foi realizada.
+                </p>
+
+                <a
+                    href="../index.html"
+                    class="back-home"
+                >
+                    ← Voltar para o início
+                </a>
+
+            </div>
+
+
+            <div
+                class="login-register"
+                id="loginRegister"
+            >
+
+                Ainda não possui uma conta?
+
+                <a href="cadastro.html">
+                    Criar conta
+                </a>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
+    <footer class="footer">
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Temporada SE.
+                Projeto acadêmico MAISTI/UFS.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================
+         JAVASCRIPT
+    ====================================== -->
+
+    <script>
+
+        const loginForm =
+            document.getElementById("loginForm");
+
+
+        const loginMessage =
+            document.getElementById("loginMessage");
+
+
+        const reservationBox =
+            document.getElementById("reservationBox");
+
+
+        const reservationInfo =
+            document.getElementById("reservationInfo");
+
+
+        const confirmButton =
+            document.getElementById("confirmButton");
+
+
+        const confirmation =
+            document.getElementById("confirmation");
+
+
+        const loginHeader =
+            document.getElementById("loginHeader");
+
+
+        const loginRegister =
+            document.getElementById("loginRegister");
+
+
+        // ----------------------------------------
+        // FORMATAR DATA
+        // ----------------------------------------
+
+        function formatarData(data) {
+
+            if (!data) {
+
+                return "";
+
+            }
+
+
+            const partes =
+                data.split("-");
+
+
+            return `${partes[2]}/${partes[1]}/${partes[0]}`;
+
+        }
+
+
+        // ----------------------------------------
+        // FORMATAR MOEDA
+        // ----------------------------------------
+
+        function formatarMoeda(valor) {
+
+            return Number(valor).toLocaleString(
+                "pt-BR",
+                {
+                    style: "currency",
+                    currency: "BRL"
+                }
+            );
+
+        }
+
+
+        // ----------------------------------------
+        // LOGIN
+        // ----------------------------------------
+
+        loginForm.addEventListener(
+            "submit",
+            function (event) {
+
+                event.preventDefault();
+
+
+                const email =
+                    document.getElementById("email").value.trim();
+
+
+                const senha =
+                    document.getElementById("senha").value.trim();
+
+
+                if (!email || !senha) {
+
+                    mostrarMensagem(
+                        "Preencha o e-mail e a senha.",
+                        "error"
+                    );
+
+                    return;
+
+                }
+
+
+                // --------------------------------
+                // LOGIN SIMULADO
+                // --------------------------------
+                //
+                // Como este é um protótipo acadêmico,
+                // não temos banco de dados.
+                //
+                // O usuário é considerado autenticado
+                // quando informa os campos corretamente.
+                // --------------------------------
+
+                const usuario = {
+
+                    email: email
+
+                };
+
+
+                localStorage.setItem(
+                    "usuarioTemporadaSE",
+                    JSON.stringify(usuario)
+                );
+
+
+                mostrarMensagem(
+                    "Login realizado com sucesso!",
+                    "success"
+                );
+
+
+                carregarReserva();
+
+            }
+        );
+
+
+        // ----------------------------------------
+        // MOSTRAR MENSAGEM
+        // ----------------------------------------
+
+        function mostrarMensagem(
+            mensagem,
+            tipo
+        ) {
+
+            loginMessage.textContent =
+                mensagem;
+
+
+            loginMessage.className =
+                `login-message ${tipo}`;
+
+        }
+
+
+        // ----------------------------------------
+        // CARREGAR RESERVA
+        // ----------------------------------------
+
+        function carregarReserva() {
+
+            const reservaSalva =
+                localStorage.getItem(
+                    "reservaTemporadaSE"
+                );
+
+
+            if (!reservaSalva) {
+
+                return;
+
+            }
+
+
+            let reserva;
+
+
+            try {
+
+                reserva =
+                    JSON.parse(
+                        reservaSalva
+                    );
+
+            } catch (erro) {
+
+                console.error(
+                    "Erro ao recuperar reserva.",
+                    erro
+                );
+
+                return;
+
+            }
+
+
+            reservationInfo.innerHTML = `
+
+                <div>
+
+                    <span>
+                        Imóvel
+                    </span>
+
+                    <strong>
+                        ${reserva.imovel}
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Entrada
+                    </span>
+
+                    <strong>
+                        ${formatarData(reserva.entrada)}
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Saída
+                    </span>
+
+                    <strong>
+                        ${formatarData(reserva.saida)}
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Hóspedes
+                    </span>
+
+                    <strong>
+                        ${reserva.hospedes}
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Noites
+                    </span>
+
+                    <strong>
+                        ${reserva.noites}
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong>
+                        ${formatarMoeda(reserva.valorTotal)}
+                    </strong>
+
+                </div>
+
+            `;
+
+
+            reservationBox.style.display =
+                "block";
+
+        }
+
+
+        // ----------------------------------------
+        // CONFIRMAR RESERVA
+        // ----------------------------------------
+
+        confirmButton.addEventListener(
+            "click",
+            function () {
+
+                const reservaSalva =
+                    localStorage.getItem(
+                        "reservaTemporadaSE"
+                    );
+
+
+                if (!reservaSalva) {
+
+                    mostrarMensagem(
+                        "Não encontramos uma reserva pendente.",
+                        "error"
+                    );
+
+                    return;
+
+                }
+
+
+                const reserva =
+                    JSON.parse(
+                        reservaSalva
+                    );
+
+
+                const usuario =
+                    JSON.parse(
+                        localStorage.getItem(
+                            "usuarioTemporadaSE"
+                        )
+                    );
+
+
+                // Associar reserva ao usuário.
+
+                reserva.usuario =
+                    usuario.email;
+
+
+                reserva.status =
+                    "Solicitada";
+
+
+                reserva.dataSolicitacao =
+                    new Date().toISOString();
+
+
+                localStorage.setItem(
+                    "reservaConfirmadaTemporadaSE",
+                    JSON.stringify(reserva)
+                );
+
+
+                // Reserva pendente deixa de ser necessária.
+
+                localStorage.removeItem(
+                    "reservaTemporadaSE"
+                );
+
+
+                // Esconder elementos antigos.
+
+                loginForm.style.display =
+                    "none";
+
+                reservationBox.style.display =
+                    "none";
+
+                loginHeader.style.display =
+                    "none";
+
+                loginRegister.style.display =
+                    "none";
+
+
+                // Mostrar confirmação.
+
+                confirmation.style.display =
+                    "block";
+
+            }
+        );
+
+    </script>
+
+</body>
+
+</html>
+```
+
